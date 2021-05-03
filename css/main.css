@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #312E3A; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900; }
+
+.upper {
+  text-transform: uppercase; }
+
+.big-title {
+  font-size: 4.8rem; }
+
+.med-title {
+  font-size: 2.8rem; }
+
+p {
+  color: #003F69;
+  line-height: 30px;
+  font-size: 18px; }
+
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  padding: .7rem 2.5rem;
+  transition: .3s;
+  border-radius: 10px; }
+  .btn:hover {
+    opacity: .8; }
+  .btn-blue {
+    background: linear-gradient(270deg, #198CD9 6.67%, rgba(25, 140, 217, 0.83) 50%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .btn-black {
+    background: linear-gradient(270deg, #312E3A 6.67%, rgba(49, 46, 58, 0.83) 50%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .btn-green {
+    background-color: #00E676;
+    color: #312E3A; }
+
+.footer {
+  position: relative;
+  margin-top: 40vh;
+  padding-top: 2.4rem;
+  background-color: #312E3A;
+  color: #FFFFFF;
+  min-height: 60vh; }
+  .footer .waves {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-95%); }
+  .footer .container .menu__item {
+    margin-bottom: 1.6rem; }
+    .footer .container .menu__item .menu__link {
+      color: #FFFFFF; }
+  .footer .btn-list .btn {
+    justify-self: flex-end;
+    display: block;
+    width: fit-content;
+    margin-bottom: 1.6rem; }
+
+.navigation {
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  background-color: #198CD9;
+  left: 0;
+  bottom: 0;
+  border-radius: 15px 15px 0 0;
+  padding: 4.8rem;
+  color: #FFFFFF;
+  transition: .5s;
+  transform: translateY(100%);
+  opacity: 0;
+  z-index: 100; }
+  .navigation.open {
+    transform: translateY(0);
+    opacity: 1; }
+  .navigation .close-btn {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #40A2E4;
+    border-radius: 50%;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: .3s ease-out; }
+    .navigation .close-btn:hover {
+      opacity: .7; }
+    .navigation .close-btn__line {
+      width: 50%;
+      height: 3px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      transition: .3s;
+      transform: translateX(-50%) rotate(-45deg);
+      top: 50%;
+      left: 50%;
+      position: absolute; }
+      .navigation .close-btn__line:nth-child(2) {
+        transform: translateX(-50%) rotate(45deg); }
+  .navigation .user-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4.8rem;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 4.8rem; }
+    .navigation .user-info .username {
+      margin-left: 1.6rem;
+      font-weight: bold;
+      color: #FFFFFF; }
+  .navigation .menu__item {
+    display: flex;
+    margin-bottom: 1.6rem; }
+    .navigation .menu__item:hover a::before {
+      transform: scale(1); }
+    .navigation .menu__item a {
+      margin-left: 1.6rem;
+      font-weight: bold;
+      color: #FFFFFF;
+      display: inline-block;
+      position: relative; }
+      .navigation .menu__item a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #FFFFFF;
+        transform-origin: 0%;
+        transition: .3s;
+        transform: scale(0); }
+
+.hamberger-nav {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 2.4rem;
+  z-index: 99; }
+  .hamberger-nav .container {
+    display: flex;
+    justify-content: space-between; }
+  .hamberger-nav .hamberger-icon {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; }
+    .hamberger-nav .hamberger-icon:hover .line {
+      width: 100%; }
+    .hamberger-nav .hamberger-icon .line {
+      background-color: #312E3A;
+      height: 2px;
+      width: 100%;
+      transition: .3s; }
+      .hamberger-nav .hamberger-icon .line-1 {
+        width: 80%;
+        align-self: flex-end; }
+      .hamberger-nav .hamberger-icon .line-3 {
+        width: 60%;
+        align-self: flex-end; }
+
+.home {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15vh;
+  overflow: hidden; }
+  .home .bg-circle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110%;
+    z-index: -1; }
+  .home__content {
+    text-align: center; }
+    .home__content .big-title {
+      line-height: 48px;
+      margin-bottom: 2.4rem; }
+    .home__content p {
+      margin-bottom: 2.4rem; }
+    .home__content .btn-box {
+      display: flex;
+      justify-content: space-around; }
+  .home .img-header {
+    width: 60%;
+    margin-top: 20vh; }
+
+.community {
+  min-height: 60vh; }
+  .community .container {
+    display: flex;
+    flex-direction: column; }
+    .community .container .community__content {
+      text-align: center; }
+      .community .container .community__content h2, .community .container .community__content p {
+        margin-bottom: 2.4rem; }
+  .community .photos-grid {
+    display: flex;
+    margin-top: 6.4rem;
+    justify-content: space-between; }
+    .community .photos-grid img {
+      transition: .5s; }
+      .community .photos-grid img:hover {
+        opacity: .8; }
+    .community .photos-grid img:nth-child(even) {
+      transform: translateY(-30%); }
+
+.goals, .tasks {
+  min-height: 50vh;
+  position: relative; }
+  .goals .container, .tasks .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .goals .container .med-title, .tasks .container .med-title {
+      margin-bottom: 4.8rem;
+      text-align: center; }
+
+.container {
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto; }

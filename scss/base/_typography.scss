@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: $black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 900;
+}
+.upper {
+    text-transform: uppercase;
+}
+
+.big-title {
+    font-size: $xl-size ;
+}
+
+.med-title {
+    font-size: 2.8rem;
+}
+
+p {
+    color: $paragraph-blue;
+    line-height: 30px;
+    font-size: 18px;
+}
