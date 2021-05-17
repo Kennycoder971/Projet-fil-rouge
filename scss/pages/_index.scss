@@ -9,10 +9,12 @@
 
     .bg-circle {
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 110%;
+        left: 50%;
+        top: -30vh;
+        width: 150vw;
+        max-height:100vh;
         z-index: -1;
+        transform: translateX(-50%)
     }
 
     &__content {
@@ -43,23 +45,50 @@
 .community {
     min-height: 60vh;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-
-        .community__content {
-            text-align: center;
-            h2,p {
-                margin-bottom: $ml-size;
-            }
-        }
-
-    }
+   
     .photos-grid {
         display: flex;
         margin-top: $xxl-size;
         justify-content: space-between;
+        flex-wrap: wrap;
+        
+         .community__content {
+            text-align: center;
+            h2,p {
+                margin-bottom: $ml-size;
+                
+            }
 
+        }
+        .col-text {
+            order: -1;
+            flex: 1 1 100%;
+            justify-self: center;
+            text-align: center;
+            margin-bottom: 7rem;
+        }
+
+        .col:not(:nth-child(2)) {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .col:last-child {
+            img:nth-child(1) {
+                transform: translateY(-30%);
+            }
+            :nth-child(2) {
+                transform: translateY(0);
+            }
+             img:nth-child(3) {
+                transform: translateY(-30%);
+            }
+        }
+
+        .col:nth-child(1){
+            margin-right: 4rem;
+        }
         img {
             transition: .5s;
             &:hover {
@@ -85,6 +114,57 @@
         .med-title {
             margin-bottom: $xl-size;
             text-align: center;
+        }
+    }
+}
+
+@media  (min-width:500px) and (max-width:767px) {
+   
+    .community {
+        
+        .photos-grid {
+           
+           flex-wrap: nowrap;
+           .col-text {
+               order: 0;
+               flex: 0 1 auto;
+               margin: 0 2vw;
+           }
+           .col:nth-child(1) {
+               margin-right: 0;
+           }
+           .col:not(:nth-child(2)){
+               align-items: center;
+               img{
+                   display: block;
+                   height: 85px;
+               }
+
+           }
+        }
+
+    }
+
+    .footer {
+        .container {
+            .menu {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:525px) {
+    .footer {
+        .container {
+            .menu {
+                grid-template-columns: repeat(4,1fr);
+            }
         }
     }
 }
