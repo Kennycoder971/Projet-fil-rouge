@@ -63,17 +63,18 @@ ul {
 
 .footer {
   position: relative;
-  margin-top: 40vh;
+  margin-top: 20vh;
   padding-top: 2.4rem;
   background-color: #312E3A;
   color: #FFFFFF;
-  min-height: 60vh; }
+  height: 60vh; }
   .footer .waves {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-95%); }
+    transform: translateY(-45%);
+    z-index: -1; }
   .footer .container .menu__item {
     margin-bottom: 1.6rem; }
     .footer .container .menu__item .menu__link {
@@ -83,6 +84,44 @@ ul {
     display: block;
     width: fit-content;
     margin-bottom: 1.6rem; }
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    min-height: 20vh; }
+    .footer .container .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      gap: 3rem; } }
+
+@media (min-width: 525px) {
+  .footer .container .menu {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media (min-width: 769px) {
+  .footer {
+    max-height: 20vh;
+    display: flex;
+    align-items: center; }
+    .footer .container {
+      display: flex;
+      align-items: center; }
+      .footer .container .menu {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0; }
+        .footer .container .menu__col {
+          display: flex;
+          justify-content: space-between;
+          gap: 10rem;
+          flex: 1; }
+          .footer .container .menu__col.btn-list {
+            margin-top: 2vh;
+            flex: 1 1 100%;
+            justify-content: center; } }
 
 .navigation {
   position: fixed;
@@ -158,6 +197,12 @@ ul {
         transform-origin: 0%;
         transition: .3s;
         transform: scale(0); }
+  .navigation .menu .blue-link {
+    display: none; }
+    .navigation .menu .blue-link a {
+      color: #198CD9; }
+      .navigation .menu .blue-link a::before {
+        background-color: #198CD9; }
 
 .hamberger-nav {
   width: 100%;
@@ -191,20 +236,51 @@ ul {
         width: 60%;
         align-self: flex-end; }
 
+@media (min-width: 769px) {
+  .navigation {
+    position: static;
+    transform: translateY(0);
+    opacity: 1;
+    border-radius: 0;
+    height: auto;
+    padding: 3rem;
+    background-color: transparent; }
+    .navigation .container {
+      display: flex;
+      justify-content: space-between; }
+    .navigation .close-btn, .navigation .user-info {
+      display: none; }
+    .navigation .menu {
+      display: flex;
+      max-width: 1100px; }
+      .navigation .menu__item img {
+        display: none; }
+      .navigation .menu__item a::before {
+        background-color: #312E3A; }
+      .navigation .menu__item .menu__link {
+        color: #312E3A;
+        padding: 0; }
+      .navigation .menu .blue-link {
+        display: block; }
+  .hamberger-nav {
+    display: none; } }
+
 .home {
   min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   padding-top: 15vh;
   overflow: hidden; }
+  .home .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .home .bg-circle {
     position: absolute;
     left: 50%;
     top: -30vh;
     width: 150vw;
-    max-height: 100vh;
+    max-height: 110vh;
     z-index: -1;
     transform: translateX(-50%); }
   .home__content {
@@ -219,10 +295,11 @@ ul {
       justify-content: space-around; }
   .home .img-header {
     width: 60%;
-    margin-top: 20vh; }
+    margin-top: 5vh; }
 
 .community {
-  min-height: 60vh; }
+  min-height: 40vh;
+  margin-bottom: 10vh; }
   .community .photos-grid {
     display: flex;
     margin-top: 6.4rem;
@@ -258,7 +335,7 @@ ul {
       transform: translateY(-30%); }
 
 .goals, .tasks {
-  min-height: 50vh;
+  min-height: 40vh;
   position: relative; }
   .goals .container, .tasks .container {
     display: flex;
@@ -269,7 +346,14 @@ ul {
       margin-bottom: 4.8rem;
       text-align: center; }
 
-@media (min-width: 500px) and (max-width: 767px) {
+.tasks {
+  margin-top: 10vh; }
+  .tasks .container {
+    flex-direction: column-reverse; }
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .home .bg-circle {
+    top: -45vh; }
   .community .photos-grid {
     flex-wrap: nowrap; }
     .community .photos-grid .col-text {
@@ -282,18 +366,65 @@ ul {
       align-items: center; }
       .community .photos-grid .col:not(:nth-child(2)) img {
         display: block;
-        height: 85px; }
-  .footer .container .menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 3rem; } }
+        height: 85px; } }
 
-@media (min-width: 525px) {
-  .footer .container .menu {
-    grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 769px) {
+  .home {
+    overflow: unset; }
+    .home .container {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between; }
+      .home .container .home__content {
+        text-align: left; }
+        .home .container .home__content .btn-box {
+          justify-content: space-between; }
+      .home .container .img-header {
+        width: 50%;
+        max-width: 450px;
+        display: block;
+        margin-top: 0;
+        transform: translateY(-10%); }
+    .home .bg-circle {
+      left: 20vw;
+      top: -45vh;
+      height: 110vh; }
+  .community .photos-grid {
+    flex-wrap: nowrap; }
+    .community .photos-grid .col-text {
+      order: 0;
+      flex: 2 1 auto;
+      margin: 0 5vw; }
+    .community .photos-grid .col:nth-child(1) {
+      margin-right: 0; }
+    .community .photos-grid .col:not(:nth-child(2)) {
+      align-items: center;
+      flex: 1 1 auto; }
+      .community .photos-grid .col:not(:nth-child(2)) img {
+        display: block;
+        height: 200px; }
+  .goals .container, .tasks .container {
+    flex-direction: row;
+    justify-content: space-between; }
+    .goals .container .content, .tasks .container .content {
+      width: 30%; }
+      .goals .container .content h3, .tasks .container .content h3 {
+        text-align: left;
+        margin-bottom: 1.6rem; } }
 
 .container {
   width: 90%;
   max-width: 1110px;
   margin: 0 auto; }
+
+.display-desktop {
+  display: none; }
+
+.display-mobile {
+  display: block; }
+
+@media (min-width: 769px) {
+  .display-desktop {
+    display: block; }
+  .display-mobile {
+    display: none; } }

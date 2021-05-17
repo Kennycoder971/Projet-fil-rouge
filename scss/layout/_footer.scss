@@ -1,0 +1,101 @@
+.footer {
+    position: relative;
+    margin-top: 20vh;
+    padding-top: $ml-size;
+    background-color: $black;
+    color: $white;
+    height: 60vh;
+    .waves {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-45%);
+        z-index: -1;
+    }
+
+    .container {
+        
+        .menu {
+
+            &__item {
+                margin-bottom: $m-size;
+
+                .menu__link {
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+    .btn-list {
+       
+        
+        .btn {
+            justify-self: flex-end;
+            display: block;
+            width: fit-content;
+            margin-bottom: $m-size;
+        }
+    }
+}
+
+// Tablette
+
+@media  (min-width:500px) and (max-width:768px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        min-height: 20vh;
+        .container {
+            .menu {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+                gap: 3rem;
+            }
+        }
+    }
+}
+
+@media (min-width:525px) {
+    .footer {
+        .container {
+            .menu {
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+    }
+}
+// Desktop 
+
+@media (min-width:769px) {
+     .footer {
+        max-height: 20vh;
+        display: flex;
+        align-items: center;
+        .container {
+            display: flex;
+            align-items: center;
+
+            .menu {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 0;
+                &__col {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10rem;
+                    flex: 1;
+
+                    &.btn-list {
+                        margin-top: 2vh;
+                        flex: 1 1 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

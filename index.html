@@ -13,39 +13,54 @@
 <body>
     <!-- Navigation -->
     <nav class="navigation" id="navigation">
-        <div class="close-btn">
-            <div class="close-btn__line"></div>
-            <div class="close-btn__line"></div>
-        </div>
-        <div class="user-info">
-            <div class="img-container">
-                <img src="./images/index/menu/user-menu.png" class="user-img" alt="Photo de l'utilisateur">
+        <div class="container">
+
+
+            <div class="close-btn">
+                <div class="close-btn__line"></div>
+                <div class="close-btn__line"></div>
             </div>
-            <p class="username">Jean-Kévin</p>
+            <div class="user-info">
+                <div class="img-container">
+                    <img src="./images/index/menu/user-menu.png" class="user-img" alt="Photo de l'utilisateur">
+                </div>
+                <p class="username">Jean-Kévin</p>
+            </div>
+            <div class="logo">
+                <a href="./index.html"><img src="./images/index/logo.svg" alt="Logo"></a>
+            </div>
+            <ul class="menu">
+                <li class="menu__item">
+                    <img src="./images/index/menu/accueil.svg" alt="Accueil">
+                    <a href="#" class="menu__link">Accueil</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./images/index/menu/graphique.svg" alt="Tableau de bord">
+                    <a href="#" class="menu__link">Tableau de bord</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./images/index/menu/tâche.svg" alt="Tâches">
+                    <a href="#" class="menu__link">Tâches</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./images/index/menu/profil.svg" alt="Profil">
+                    <a href="#" class="menu__link">Profil</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./images/index/menu/parametres.svg" alt="Paramètres">
+                    <a href="#" class="menu__link">Paramètres</a>
+                </li>
+
+                <li class="menu__item blue-link">
+                    <a href="#">S'inscrire</a>
+                </li>
+                <li class="menu__item blue-link">
+                    <a href="#">Se connecter</a>
+                </li>
+            </ul>
         </div>
 
-        <ul class="menu">
-            <li class="menu__item">
-                <img src="./images/index/menu/accueil.svg" alt="Accueil">
-                <a href="#" class="menu__link">Accueil</a>
-            </li>
-            <li class="menu__item">
-                <img src="./images/index/menu/graphique.svg" alt="Tableau de bord">
-                <a href="#" class="menu__link">Tableau de bord</a>
-            </li>
-            <li class="menu__item">
-                <img src="./images/index/menu/tâche.svg" alt="Tâches">
-                <a href="#" class="menu__link">Tâches</a>
-            </li>
-            <li class="menu__item">
-                <img src="./images/index/menu/profil.svg" alt="Profil">
-                <a href="#" class="menu__link">Profil</a>
-            </li>
-            <li class="menu__item">
-                <img src="./images/index/menu/parametres.svg" alt="Paramètres">
-                <a href="#" class="menu__link">Paramètres</a>
-            </li>
-        </ul>
+
     </nav>
     <div class="hamberger-nav">
         <div class="container">
@@ -63,23 +78,25 @@
     <!-- Fin navigation -->
 
     <main class="home">
-        <div class="home__content">
-            <h1 class="big-title">
-                N’abandonnez <br>
-                plus vos <br>
-                résolutions.
-            </h1>
-            <p>
-                Accomplissez vos objectifs en 90 jours <br>
-                et partagez vos résultats!
-            </p>
+        <div class="container">
+            <div class="home__content">
+                <h1 class="big-title">
+                    N’abandonnez <br>
+                    plus vos <br>
+                    résolutions.
+                </h1>
+                <p>
+                    Accomplissez vos objectifs en 90 jours <br>
+                    et partagez vos résultats!
+                </p>
 
-            <div class="btn-box">
-                <a href="#" class="btn-blue btn">Se connecter</a>
-                <a href="#" class="btn-black btn">C'est quoi ?</a>
+                <div class="btn-box">
+                    <a href="#" class="btn-blue btn">Se connecter</a>
+                    <a href="#" class="btn-black btn">C'est quoi ?</a>
+                </div>
             </div>
+            <img src="./images/index/img-header.svg" alt="Objectifs" class="img-header">
         </div>
-        <img src="./images/index/img-header.svg" alt="Objectifs" class="img-header">
         <img src="./images/index/header-circle.svg" alt="cercle" class="bg-circle">
     </main>
 
@@ -114,11 +131,17 @@
     </section>
     <section class="goals">
         <div class="container">
-            <h3 class="med-title">
-                Fixez-vous <br> des objectifs
-            </h3>
-
-            <img src="./images/index/phone-1.svg" alt="Téléphone" class="phone-1">
+            <div class="content">
+                <h3 class="med-title">
+                    Fixez-vous <br> des objectifs
+                </h3>
+                <p class="display-desktop">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ab delectus at, itaque iusto
+                    quod dolorum minus alias ratione doloribus?
+                </p>
+            </div>
+            <img src="./images/index/phone-1.svg" alt="Téléphone" class="phone-1 display-mobile">
+            <img src="./images/index/Img-objectifs-desktop.svg" alt="" class="display-desktop">
 
         </div>
 
@@ -126,17 +149,25 @@
 
     <section class="tasks">
         <div class="container">
-            <h3 class="med-title">
-                Découpez les <br> en tâches
-            </h3>
 
-            <img src="./images/index/phone-2.svg" alt="Téléphone" class="phone-2">
 
+            <img src="./images/index/Img-taches-desktop.png" alt="" class="display-desktop">
+            <img src="./images/index/phone-2.svg" alt="" class="display-mobile">
+            <div class="content">
+                <h3 class="med-title">
+                    Découpez les <br> en tâches
+                </h3>
+                <p class="display-desktop">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ab delectus at, itaque iusto
+                    quod dolorum minus alias ratione doloribus?
+                </p>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <img src="./images/index/footer-waves.svg" alt="Vagues" class="waves">
+        <img src="./images/index/footer-waves-desktop.svg" alt="" class="waves display-desktop">
+        <img src="./images/index/footer-waves.svg" alt="Vagues" class="waves display-mobile">
         <div class="container">
             <ul class="menu">
                 <div class="menu__col">

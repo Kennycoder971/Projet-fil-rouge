@@ -97,6 +97,17 @@
                 }
             }
         }
+
+        .blue-link {
+            display: none;
+            a {
+                color: $blue;
+
+                &::before {
+                    background-color: $blue;
+                }
+            }
+        }
     }
 }
 
@@ -146,4 +157,54 @@
             }
         }
     }
+}
+
+
+// Desktop
+@media (min-width:769px) {
+    .navigation {
+        position: static;
+        transform: translateY(0);
+        opacity: 1;
+        border-radius: 0;
+        height: auto;
+        padding: 3rem;
+        
+        background-color: transparent;
+        .container {
+            display: flex;
+             justify-content: space-between;
+        }
+        .close-btn,.user-info {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            max-width: 1100px;
+
+            &__item {
+                img {
+                    display: none;
+                }
+                a::before {
+                    background-color: $black;
+                }
+                .menu__link {
+                    color: $black;
+                    padding: 0;
+
+                }
+            }
+
+             .blue-link {
+                display: block;
+            }
+        }
+    }
+
+    .hamberger-nav {
+        display: none;
+    }
+
 }
